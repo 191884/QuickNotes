@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateCard"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:background="@color/colorStatusbar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/back_icon" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="38sp"
+                android:text="Update Task"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:textColor="@color/colorText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="If you are doing it, Just do it..."
+                android:fontFamily="@font/seg_ui_semibold"
+                android:textColor="@color/colorText"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:elevation="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/card_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+            <EditText
+                android:id="@+id/update_title"
+                android:textColorHint="@color/colorPlaceholder"
+                android:drawableTint="@color/colorTextBlack"
+                android:hint="Task here"
+                android:textColor="@color/colorTextBlack"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:background="@drawable/edit_text_background"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"/>
+
+            <EditText
+                android:layout_marginTop="22dp"
+                android:id="@+id/update_priority"
+                android:textColorHint="@color/colorPlaceholder"
+                android:drawableTint="@color/colorTextBlack"
+                android:hint="Priority"
+                android:textColor="@color/colorTextBlack"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:background="@drawable/edit_text_background"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"/>
+
+
+            <!--            <Spinner-->
+
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:background="@drawable/spinner"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:layout_marginLeft="48dp"-->
+<!--                android:layout_marginRight="48dp"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="28dp"
+                android:paddingRight="28dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+
+                <soup.neumorphism.NeumorphButton
+                    style="@style/Widget.Neumorph.Button"
+                    android:id="@+id/update_button"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="48dp"
+                    android:layout_weight="1"
+                    android:text="Update"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/seg_ui_semibold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <soup.neumorphism.NeumorphButton
+                    style="@style/Widget.Neumorph.Button"
+                    android:id="@+id/delete_button"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delete"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/seg_ui_semibold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
+
+
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp">
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        app:neumorph_lightSource="rightBottom"
+        android:padding="12dp"
+        android:background="@drawable/rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/mylayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Your task go here"
+
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="Priority: High"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+</LinearLayout>

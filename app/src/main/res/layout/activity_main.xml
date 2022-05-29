@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/wallpaper">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="Your Notes"
+            android:textColor="@color/colorText"
+            android:textSize="40sp" />
+        <soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            app:neumorph_lightSource="rightBottom"
+            android:id="@+id/deleteAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#FF5722"
+            android:text="X"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:elevation="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            tools:listitem="@layout/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            app:neumorph_lightSource="rightBottom"
+            android:id="@+id/add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/circular_button"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </FrameLayout>
+</LinearLayout>
