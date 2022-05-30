@@ -77,5 +77,11 @@ class CreateCard : AppCompatActivity() {
             }
         }
 
+        val goback: ImageView = findViewById(R.id.goback)
+        goback.setOnClickListener{
+            intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

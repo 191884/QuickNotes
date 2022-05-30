@@ -13,6 +13,7 @@
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/goback"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_marginLeft="22dp"
@@ -53,47 +54,49 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerVertical="true">
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
             <EditText
                 android:id="@+id/create_title"
-                android:textColorHint="@color/colorPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/edit_text_background"
                 android:drawableTint="@color/colorTextBlack"
+                android:fontFamily="@font/seg_ui_semibold"
                 android:hint="Task here"
-                android:textColor="@color/colorTextBlack"
                 android:paddingLeft="26dp"
                 android:paddingRight="26dp"
-                android:fontFamily="@font/seg_ui_semibold"
-                android:background="@drawable/edit_text_background"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="48dp"/>
+                android:textColor="@color/colorTextBlack"
+                android:textColorHint="@color/colorPlaceholder" />
+
             <Spinner
                 android:id="@+id/spinner"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/spinner"
-                android:spinnerMode="dialog"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginLeft="48dp"
-                android:layout_marginRight="48dp"/>
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/spinner"
+                android:spinnerMode="dialog" />
 
             <soup.neumorphism.NeumorphButton
-                style="@style/Widget.Neumorph.Button"
                 android:id="@+id/save_button"
+                style="@style/Widget.Neumorph.Button"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="48dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginLeft="48dp"
-                android:layout_weight="1"
-                android:text="Save"
-                android:textColor="@color/black"
                 android:layout_gravity="center"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="48dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:text="Save"
                 android:textAllCaps="false"
-                android:textSize="16dp"
-                android:fontFamily="@font/seg_ui_semibold" />
+                android:textColor="@color/black"
+                android:textSize="16dp" />
         </LinearLayout>
 
     </RelativeLayout>

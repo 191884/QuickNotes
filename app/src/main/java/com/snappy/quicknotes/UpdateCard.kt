@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.room.Room
 import kotlinx.coroutines.GlobalScope
@@ -62,6 +63,13 @@ class UpdateCard : AppCompatActivity() {
                     )
                 }
                 myIntent()
+            }
+
+
+            val goback: ImageView = findViewById(R.id.goback)
+            goback.setOnClickListener{
+                intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
             }
 
         }

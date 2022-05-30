@@ -20,11 +20,12 @@
         <entry key="app/src/main/res/drawable/spinner.xml" value="0.1005" />
         <entry key="app/src/main/res/font/segoe_ui_bold.xml" value="0.18611111111111112" />
         <entry key="app/src/main/res/layout/activity_create_card.xml" value="0.23541666666666666" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2046875" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.23541666666666666" />
         <entry key="app/src/main/res/layout/activity_update_card.xml" value="0.22239583333333332" />
         <entry key="app/src/main/res/layout/spinner_layout.xml" value="0.10364583333333334" />
         <entry key="app/src/main/res/layout/view.xml" value="0.2317948717948718" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.20364583333333333" />
       </map>
     </option>
   </component>

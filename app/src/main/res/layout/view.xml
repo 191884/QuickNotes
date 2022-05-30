@@ -9,7 +9,7 @@
 
     <soup.neumorphism.NeumorphCardView
         style="@style/Widget.Neumorph.CardView"
-        app:neumorph_lightSource="rightBottom"
+        app:neumorph_lightSource="leftTop"
         android:padding="12dp"
         android:background="@drawable/rectangle"
         android:layout_width="match_parent"
