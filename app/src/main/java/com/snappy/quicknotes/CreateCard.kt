@@ -23,48 +23,46 @@ class CreateCard : AppCompatActivity() {
 
         val priorities = resources.getStringArray(R.array.Priorities)
         val spinner: Spinner = findViewById(R.id.spinner)
-        if (true) {
-            val spinAdapter = ArrayAdapter(this, R.layout.spinner_layout, priorities)
-            spinner.adapter = spinAdapter
+        val spinAdapter = ArrayAdapter(this, R.layout.spinner_layout, priorities)
+        spinner.adapter = spinAdapter
 
 
-            spinner.onItemSelectedListener = object :
-                AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
-                override fun onItemClick(
-                    parent: AdapterView<*>?,
-                    view: View?,
-                    position: Int,
-                    id: Long
-                ) {
-                    Toast.makeText(
-                        this@CreateCard,
-                        parent?.getItemAtPosition(position).toString() + " Selected",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-
-                override fun onItemSelected(
-                    parent: AdapterView<*>?,
-                    view: View?,
-                    position: Int,
-                    id: Long
-                ) {
-                    priority = parent?.getItemAtPosition(position).toString()
-                }
-
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-                    TODO("Not yet implemented")
-                }
-
-            }
-        }
-        val save_button: Button = findViewById(R.id.save_button)
-        val create_title: TextView = findViewById(R.id.create_title)
-
-        save_button.setOnClickListener {
-            if (create_title.text.toString().trim { it <= ' ' }.isNotEmpty()
+        spinner.onItemSelectedListener = object :
+            AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
+            override fun onItemClick(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
             ) {
-                var title = create_title.text.toString()
+                Toast.makeText(
+                    this@CreateCard,
+                    parent?.getItemAtPosition(position).toString() + " Selected",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                priority = parent?.getItemAtPosition(position).toString()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+        }
+        val saveButton: Button = findViewById(R.id.save_button)
+        val createTitle: TextView = findViewById(R.id.create_title)
+
+        saveButton.setOnClickListener {
+            if (createTitle.text.toString().trim { it <= ' ' }.isNotEmpty()
+            ) {
+                val title = createTitle.text.toString()
 
                 DataObject.setData(title, priority)
                 GlobalScope.launch {
